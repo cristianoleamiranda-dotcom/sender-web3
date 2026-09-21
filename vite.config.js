@@ -7,6 +7,16 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          r3f: ['@react-three/fiber', '@react-three/drei'],
+          react: ['react', 'react-dom'],
+        },
+      },
+    },
   },
   preview: {
     allowedHosts: true,
