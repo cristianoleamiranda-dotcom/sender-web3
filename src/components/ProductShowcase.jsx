@@ -58,9 +58,17 @@ export default function ProductShowcase({ product }) {
                 Vista 3D
               </button>
             </div>
-            <div className="aspect-[16/11]">
+            <div className={`aspect-[16/11] ${product.image && view === 'visual' ? 'bg-[#f5f6f7]' : ''}`}>
               {view === 'visual' ? (
-                <ProductVisual category={product.category} />
+                product.image ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${product.image}`}
+                    alt={product.name}
+                    className="h-full w-full object-contain p-4"
+                  />
+                ) : (
+                  <ProductVisual category={product.category} />
+                )
               ) : (
                 <Product3D category={product.category} className="h-full w-full" />
               )}

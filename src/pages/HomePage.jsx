@@ -193,6 +193,40 @@ export default function HomePage() {
                 Transmitiendo desde Santiago, Chile
               </p>
             </div>
+            <div className="col-span-2 overflow-hidden rounded-2xl border border-white/10 bg-[#f5f6f7]">
+              <img
+                src={`${import.meta.env.BASE_URL}assets/images/products/familia-am.jpg`}
+                alt="Familia de transmisores AM SENDER"
+                loading="lazy"
+                className="h-44 w-full object-cover"
+              />
+              <p className="bg-black px-4 py-2.5 text-center text-[10px] uppercase tracking-[0.25em] text-white/50">
+                Familia de transmisores AM SENDER · 1 a 10 kW
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-6 rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-6">
+          <span className="rounded-xl bg-white p-2.5">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/images/logo-sender.png`}
+              alt="Logo SENDER"
+              className="h-9"
+            />
+          </span>
+          <div>
+            <p className="text-sm font-bold uppercase tracking-wider">
+              Empresa chilena · más de 20 años de trayectoria
+            </p>
+            <a
+              href="https://www.sender.cl"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-sender hover:underline"
+            >
+              Sitio oficial: www.sender.cl →
+            </a>
           </div>
         </div>
       </section>

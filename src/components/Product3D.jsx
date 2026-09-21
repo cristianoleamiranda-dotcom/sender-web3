@@ -120,7 +120,33 @@ function RfModel() {
   )
 }
 
+function TrailerModel() {
+  return (
+    <group>
+      <mesh position={[0, 0.1, 0]}>
+        <boxGeometry args={[2.4, 0.15, 1.3]} />
+        <meshStandardMaterial color="#8b939a" metalness={0.8} roughness={0.4} />
+      </mesh>
+      {[-0.6, 0.6].map((x) => (
+        <mesh key={x} position={[x, -0.25, 0.72]} rotation={[Math.PI / 2, 0, 0]}>
+          <cylinderGeometry args={[0.3, 0.3, 0.14, 20]} />
+          <meshStandardMaterial color="#15181b" roughness={0.85} />
+        </mesh>
+      ))}
+      <mesh position={[0.85, 1.3, 0]}>
+        <cylinderGeometry args={[0.045, 0.09, 2.4, 12]} />
+        <meshStandardMaterial color="#c7ccd1" metalness={0.9} roughness={0.3} />
+      </mesh>
+      <mesh position={[-0.55, 0.8, 0]} rotation={[0, 0, 0.45]}>
+        <boxGeometry args={[1.5, 0.05, 1.05]} />
+        <meshStandardMaterial color="#16295e" metalness={0.6} roughness={0.3} emissive="#0a1a3e" emissiveIntensity={0.5} />
+      </mesh>
+    </group>
+  )
+}
+
 const MODELS = {
+  energia: TrailerModel,
   'transmisores-am': RackModel,
   'transmisores-fm': RackModel,
   audio: RackModel,

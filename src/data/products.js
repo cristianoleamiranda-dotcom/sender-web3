@@ -64,6 +64,13 @@ export const CATEGORIES = [
     short: 'Condensadores · Coaxial · IC',
     blurb: 'Componentes de alta potencia para electrónica y radiofrecuencia profesional.',
   },
+  {
+    slug: 'energia',
+    name: 'Carros Fotovoltaicos',
+    short: '2–7 kVA · Mástil telescópico 12 m',
+    blurb:
+      'Soluciones móviles de energía solar con mástil telescópico para operación autónoma en terreno.',
+  },
 ]
 
 export const products = [
@@ -440,7 +447,49 @@ export const products = [
     ],
     applications: ['Amplificación de potencia', 'Proyectos especiales', 'Integración OEM'],
   },
+
+  /* ── CARROS FOTOVOLTAICOS ────────────────────────── */
+  {
+    id: 'carro-fotovoltaico',
+    name: 'Carro Fotovoltaico · 2 a 7 kVA',
+    category: 'energia',
+    shortDescription:
+      'Solución móvil de energía solar con mástil telescópico de 12 metros para operación autónoma en terreno.',
+    longDescription:
+      'Carros fotovoltaicos SENDER para alimentación autónoma de sitios de transmisión y proyectos en terreno: potencia de 2 kVA a 7 kVA, mástil telescópico de 12 metros, rueda de repuesto y extintor incluidos. Ideales para sitios remotos sin red eléctrica o como respaldo energético de plantas transmisoras.',
+    specs: [
+      ['Potencia', '2 kVA a 7 kVA'],
+      ['Mástil', 'Telescópico de 12 metros'],
+      ['Incluye', 'Rueda de repuesto'],
+      ['Seguridad', 'Extintor'],
+      ['Aplicación', 'Energía autónoma para sitios de transmisión'],
+    ],
+    applications: [
+      'Sitios de transmisión remotos',
+      'Respaldo energético de plantas',
+      'Proyectos temporales y móviles',
+    ],
+    image: 'assets/images/products/carro-fotovoltaico.jpg',
+    featured: true,
+  },
 ]
+
+/* Imágenes reales recuperadas de www.sender.cl (archivo Wayback Machine) */
+const IMAGES = {
+  'am-1000ss': 'assets/images/products/am-1000ss.png',
+  'am-2500ss': 'assets/images/products/am-2500ss.jpg',
+  'am-5000ss': 'assets/images/products/am-5000ss.jpg',
+  'am-10000ss': 'assets/images/products/am-10000ss.jpg',
+  'monopolo-am': 'assets/images/products/antena-mast.jpg',
+  'hf-2-30': 'assets/images/products/hf-balun.jpg',
+  'stal-200': 'assets/images/products/stl-stal100.jpg',
+  'torres-galvanizadas': 'assets/images/products/torre-valparaiso.jpg',
+  'circuitos-integrados': 'assets/images/products/circuitos.jpg',
+  atu: 'assets/images/products/atu.jpg',
+}
+products.forEach((p) => {
+  if (IMAGES[p.id]) p.image = IMAGES[p.id]
+})
 
 /* ── Helpers ─────────────────────────────────────────── */
 
