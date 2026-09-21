@@ -6,20 +6,23 @@ import Lenis from 'lenis'
 
 /* ══════════════════════════════════════════════════════════
    SENDER · Tecnología que transmite
-   ⚙️  EDITA AQUÍ tus datos de contacto reales
+   Datos reales extraídos de www.sender.cl
    ══════════════════════════════════════════════════════════ */
 const CONTACT = {
-  phoneDisplay: '+56 9 1234 5678',
-  phoneHref: 'tel:+56912345678',
+  phoneDisplay: '(+56 9) 8386 4148',
+  phoneHref: 'tel:+56983864148',
   whatsapp:
-    'https://wa.me/56912345678?text=Hola%20SENDER%2C%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto.',
-  email: 'contacto@sender.cl',
-  location: 'Santiago, Chile',
+    'https://wa.me/56983864148?text=Hola%20SENDER%2C%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto.',
+  email: 'sender@sender.cl',
+  emailVentas: 'bis.ltda@gmail.com',
+  location: 'Blanco Viel #1108, San Miguel, Santiago, Chile',
+  website: 'www.sender.cl',
+  websiteHref: 'https://www.sender.cl',
 }
 
 const NAV_LINKS = [
   { label: 'Inicio', target: '#inicio' },
-  { label: 'Servicios', target: '#servicios' },
+  { label: 'Productos', target: '#servicios' },
   { label: 'Nosotros', target: '#nosotros' },
   { label: 'Contacto', target: '#contacto' },
 ]
@@ -40,8 +43,8 @@ const Icon = ({ children }) => (
 
 const SERVICES = [
   {
-    title: 'Broadcasting',
-    desc: 'Transmisión de señales de TV y radio con equipamiento profesional y cobertura garantizada en todo Chile.',
+    title: 'Transmisores AM Estado Sólido',
+    desc: 'Serie SENDER SS de 1.000W a 10.000W para banda media (490–1700 kHz). Arquitectura modular Clase D con modulación PWM y sintetizador digital de alta estabilidad.',
     icon: (
       <Icon>
         <circle cx="12" cy="12" r="1.5" />
@@ -53,51 +56,51 @@ const SERVICES = [
     ),
   },
   {
-    title: 'Telecomunicaciones',
-    desc: 'Diseño e implementación de redes de datos, enlaces punto a punto y punto a multipunto para empresas.',
+    title: 'Transmisores FM',
+    desc: 'Equipos profesionales 88–108 MHz desde 30W a 1.000W, con sintetizador digital de fase de alta eficiencia, protección de ROE y sobretemperatura.',
     icon: (
       <Icon>
-        <circle cx="12" cy="5" r="2" />
-        <circle cx="5" cy="19" r="2" />
-        <circle cx="19" cy="19" r="2" />
-        <path d="M12 7v4M12 11l-6 6M12 11l6 6M7 19h10" />
+        <path d="M2 12c2-5 4-5 6 0s4 5 6 0 4-5 6 0" />
       </Icon>
     ),
   },
   {
-    title: 'Fibra Óptica',
-    desc: 'Tendido, fusión y certificación de fibra óptica para redes de alta velocidad y larga distancia.',
+    title: 'Antenas AM / FM / MF / HF',
+    desc: 'Monopolos plegados para radiodifusión AM (510–1700 kHz) y antenas HF profesionales 2–30 MHz de alto rendimiento, con protección contra descargas atmosféricas.',
     icon: (
       <Icon>
-        <path d="M13 2 3 14h7l-1 8 11-13h-7l0-7z" />
+        <path d="M12 3v18" />
+        <path d="M8 21l4-16 4 16" />
+        <path d="M9.6 16h4.8" />
+        <path d="M10.6 11h2.8" />
+        <path d="M5 21h14" />
       </Icon>
     ),
   },
   {
-    title: 'Streaming & IPTV',
-    desc: 'Plataformas de streaming en vivo, IPTV corporativo y distribución de contenidos multiplataforma.',
+    title: 'Sistemas NAVTEX',
+    desc: 'Soluciones de transmisión MF 490/518 kHz diseñadas para operación confiable en entornos marítimos y de defensa.',
     icon: (
       <Icon>
-        <circle cx="12" cy="12" r="9" />
-        <path d="M10 8.5l5.5 3.5-5.5 3.5z" />
+        <circle cx="12" cy="5" r="3" />
+        <path d="M12 8v14" />
+        <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
       </Icon>
     ),
   },
   {
-    title: 'Enlaces Satelitales',
-    desc: 'Soluciones satelitales para zonas remotas, transmisiones móviles DSNG y respaldo de enlaces críticos.',
+    title: 'STL · Enlaces Estudio–Planta',
+    desc: 'Enlace STAL-200 para radio AM y FM: programación desde panel, encendido remoto de TX, memorias de frecuencia, modo mono/MPX y 10W de salida.',
     icon: (
       <Icon>
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3 12h18" />
-        <path d="M12 3a15 15 0 0 1 0 18" />
-        <path d="M12 3a15 15 0 0 0 0 18" />
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
       </Icon>
     ),
   },
   {
-    title: 'Soporte & Mantención',
-    desc: 'Mantención preventiva y correctiva 24/7 para tus sistemas de transmisión y redes de telecomunicaciones.',
+    title: 'Torres e Infraestructura RF',
+    desc: 'Venta e instalación de torres contraventadas galvanizadas. Ingeniería, montaje y desmontaje de infraestructura de telecomunicaciones de alta complejidad.',
     icon: (
       <Icon>
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
@@ -107,10 +110,17 @@ const SERVICES = [
 ]
 
 const STATS = [
-  { value: '+15', label: 'Años de experiencia' },
-  { value: '+120', label: 'Proyectos entregados' },
-  { value: '24/7', label: 'Soporte técnico' },
-  { value: '100%', label: 'Cobertura nacional' },
+  { value: '+20', label: 'Años de experiencia' },
+  { value: '10 kW', label: 'Transmisores AM estado sólido' },
+  { value: '2–30 MHz', label: 'Antenas HF profesionales' },
+  { value: 'AM · FM', label: 'HF · NAVTEX · STL' },
+]
+
+const PROYECTOS = [
+  'Sistema NAVTEX · Armada de Chile',
+  'Comunicaciones HF de largo alcance · Isla de Pascua',
+  'Desmontaje torre autosoportada 60 m · Playa Ancha, Valparaíso',
+  'Proyectos nacionales e internacionales',
 ]
 
 /* ──────────────────────────────────────────────
@@ -313,9 +323,7 @@ export default function App() {
     setSent(true)
   }
 
-  const whatsappFromForm = `https://wa.me/${CONTACT.whatsapp
-    .split('wa.me/')[1]
-    .split('?')[0]}?text=${encodeURIComponent(
+  const whatsappFromForm = `https://wa.me/56983864148?text=${encodeURIComponent(
     `Hola SENDER, soy ${form.nombre || 'un visitante'}. ${form.mensaje || 'Quisiera más información.'}`,
   )}`
 
@@ -402,7 +410,7 @@ export default function App() {
 
         <div className="pointer-events-none relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
           <span className="mb-6 rounded-full border border-sender/40 bg-sender/10 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-sender">
-            Broadcasting & Telecomunicaciones · Chile
+            Más de 20 años en Broadcasting & Telecomunicaciones
           </span>
           <h1 className="text-glow text-6xl font-black tracking-tight md:text-8xl">
             SENDER<span className="text-sender">.</span>
@@ -411,8 +419,8 @@ export default function App() {
             Tecnología que <span className="font-semibold text-sender">transmite</span>
           </p>
           <p className="mt-4 max-w-xl text-white/60">
-            Conectamos señales, personas y territorios: soluciones integrales de broadcasting,
-            fibra óptica y telecomunicaciones para todo Chile.
+            Ingeniería, equipamiento RF y sistemas de transmisión: transmisores AM/FM, antenas
+            profesionales, NAVTEX y enlaces STL para proyectos nacionales e internacionales.
           </p>
           <div className="pointer-events-auto mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -420,7 +428,7 @@ export default function App() {
               onClick={(e) => handleNav(e, '#servicios')}
               className="rounded-full bg-sender px-8 py-3 font-semibold transition-colors hover:bg-[#00a0d6]"
             >
-              Ver servicios
+              Ver productos
             </a>
             <a
               href="#contacto"
@@ -440,16 +448,25 @@ export default function App() {
         </div>
       </section>
 
-      {/* ══════════ SERVICIOS ══════════ */}
+      {/* ══════════ PRODUCTOS Y SERVICIOS ══════════ */}
       <section id="servicios" className="mx-auto max-w-6xl px-6 py-24">
         <div className="reveal mb-14 text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-sender">Lo que hacemos</span>
           <h2 className="mt-3 text-4xl font-extrabold md:text-5xl">
-            Nuestros <span className="text-sender">Servicios</span>
+            Productos y <span className="text-sender">Servicios</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/60">
-            Ingeniería, implementación y operación de sistemas de transmisión y conectividad
-            con estándares de clase mundial.
+            Tecnología de excelencia para radiodifusión y telecomunicaciones, desarrollada según
+            las necesidades de cada cliente. También encontrarás componentes RF profesionales en{' '}
+            <a
+              href={CONTACT.websiteHref}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sender underline-offset-4 hover:underline"
+            >
+              www.sender.cl
+            </a>
+            .
           </p>
         </div>
 
@@ -479,16 +496,25 @@ export default function App() {
               <span className="text-sender">alcance global</span>
             </h2>
             <p className="mt-6 leading-relaxed text-white/70">
-              SENDER es una empresa chilena especializada en broadcasting y telecomunicaciones.
-              Diseñamos, implementamos y operamos sistemas de transmisión de TV, radio, fibra
-              óptica y redes de datos para canales, productoras, empresas e instituciones a lo
-              largo de todo el país.
+              Somos una empresa chilena con más de 20 años de experiencia en el área de
+              telecomunicaciones y radiodifusión, especializada en soluciones de ingeniería,
+              equipamiento RF y sistemas de transmisión.
             </p>
             <p className="mt-4 leading-relaxed text-white/70">
-              Nuestro equipo combina experiencia en terreno con tecnología de última generación
-              para que tu señal nunca deje de transmitir. Desde Arica a Magallanes, donde hay una
-              antena chilena, puede haber tecnología SENDER.
+              Desarrollamos y suministramos tecnología para proyectos nacionales e
+              internacionales, entregando soluciones confiables en equipos AM/FM/HF/NAVTEX,
+              antenas profesionales y sistemas de comunicación.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {PROYECTOS.map((p) => (
+                <span
+                  key={p}
+                  className="rounded-full border border-sender/30 bg-sender/10 px-3 py-1.5 text-xs text-white/75"
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="reveal grid grid-cols-2 gap-5">
@@ -497,7 +523,7 @@ export default function App() {
                 key={s.label}
                 className="rounded-2xl border border-white/10 bg-black/40 p-8 text-center"
               >
-                <div className="text-4xl font-black text-sender">{s.value}</div>
+                <div className="text-3xl font-black text-sender md:text-4xl">{s.value}</div>
                 <div className="mt-2 text-sm text-white/60">{s.label}</div>
               </div>
             ))}
@@ -510,7 +536,7 @@ export default function App() {
         <div className="reveal mb-14 text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-sender">Hablemos</span>
           <h2 className="mt-3 text-4xl font-extrabold md:text-5xl">
-            Inicia tu <span className="text-sender">proyecto</span>
+            Cotiza tu <span className="text-sender">proyecto</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/60">
             Cuéntanos qué necesitas transmitir y te ayudamos a hacerlo posible.
@@ -530,7 +556,7 @@ export default function App() {
                 </svg>
               </span>
               <span>
-                <span className="block text-sm text-white/50">Teléfono</span>
+                <span className="block text-sm text-white/50">Celular</span>
                 <span className="font-semibold">{CONTACT.phoneDisplay}</span>
               </span>
             </a>
@@ -548,7 +574,7 @@ export default function App() {
               </span>
               <span>
                 <span className="block text-sm text-white/50">WhatsApp</span>
-                <span className="font-semibold">Escríbenos directo</span>
+                <span className="font-semibold">+56 9 8386 4148</span>
               </span>
             </a>
 
@@ -563,8 +589,9 @@ export default function App() {
                 </svg>
               </span>
               <span>
-                <span className="block text-sm text-white/50">Email</span>
+                <span className="block text-sm text-white/50">E-mail</span>
                 <span className="font-semibold">{CONTACT.email}</span>
+                <span className="block text-xs text-white/40">Ventas: {CONTACT.emailVentas}</span>
               </span>
             </a>
 
@@ -576,8 +603,8 @@ export default function App() {
                 </svg>
               </span>
               <span>
-                <span className="block text-sm text-white/50">Ubicación</span>
-                <span className="font-semibold">{CONTACT.location}</span>
+                <span className="block text-sm text-white/50">Dirección</span>
+                <span className="text-sm font-semibold">{CONTACT.location}</span>
               </span>
             </div>
           </div>
@@ -592,8 +619,8 @@ export default function App() {
                 </svg>
                 <h3 className="text-2xl font-bold">¡Mensaje enviado!</h3>
                 <p className="mt-2 max-w-md text-white/70">
-                  Gracias por escribirnos, {form.nombre || 'amigo'}. Te responderemos dentro de
-                  las próximas 24 horas hábiles.
+                  Gracias por escribirnos, {form.nombre || 'amigo'}. Te responderemos a la
+                  brevedad. También puedes enviarnos tu consulta directo por WhatsApp.
                 </p>
                 <a
                   href={whatsappFromForm}
@@ -601,7 +628,7 @@ export default function App() {
                   rel="noreferrer"
                   className="mt-6 rounded-full bg-[#25D366] px-6 py-3 font-semibold text-black transition-opacity hover:opacity-90"
                 >
-                  O respáldalo por WhatsApp →
+                  Enviar por WhatsApp →
                 </a>
               </div>
             ) : (
@@ -632,7 +659,7 @@ export default function App() {
                   name="empresa"
                   value={form.empresa}
                   onChange={handleChange}
-                  placeholder="Empresa / Institución"
+                  placeholder="Empresa / Radioemisora / Institución"
                   className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm outline-none transition-colors placeholder:text-white/40 focus:border-sender"
                 />
                 <textarea
@@ -640,7 +667,7 @@ export default function App() {
                   name="mensaje"
                   value={form.mensaje}
                   onChange={handleChange}
-                  placeholder="Cuéntanos tu proyecto *"
+                  placeholder="Cuéntanos tu proyecto: transmisor, antena, enlace, torre... *"
                   rows="5"
                   className="w-full resize-none rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-sm outline-none transition-colors placeholder:text-white/40 focus:border-sender"
                 />
@@ -667,8 +694,16 @@ export default function App() {
             </span>
             SENDER<span className="text-sender">.</span>
           </div>
-          <p className="text-sm text-white/40">
-            © {new Date().getFullYear()} SENDER · Tecnología que transmite · Santiago, Chile
+          <p className="text-center text-sm text-white/40">
+            © {new Date().getFullYear()} SENDER · Tecnología que transmite ·{' '}
+            <a
+              href={CONTACT.websiteHref}
+              target="_blank"
+              rel="noreferrer"
+              className="text-white/60 hover:text-sender"
+            >
+              {CONTACT.website}
+            </a>
           </p>
           <div className="flex gap-6 text-sm text-white/60">
             {NAV_LINKS.slice(1).map((l) => (
