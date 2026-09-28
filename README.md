@@ -1,5 +1,24 @@
-Logs logs .log npm-debug.log yarn-debug.log* yarn-error.log* pnpm-debug.log* lerna-debug.log*
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-node_modules dist dist-ssr *.local
-
-Editor directories and files .vscode/* !.vscode/extensions.json .idea .DS_Store *.suo .ntvs *.njsproj *.sln *.sw?
+export default defineConfig({
+  plugins: [react()],
+  base: '/sender-web3/', // IMPORTANTE: debe coincidir EXACTAMENTE con el nombre del repo
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          r3f: ['@react-three/fiber', '@react-three/drei'],
+          react: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
+  preview: {
+    allowedHosts: true,
+  },
+})
