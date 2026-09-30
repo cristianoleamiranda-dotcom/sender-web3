@@ -1,3 +1,1 @@
-User-agent: * Allow: /
-
-Sitemap: https://cristianoleamiranda-dotcom.github.io/sender-web3/sitemap.xml
+https://github.com/cristianoleamiranda-dotcom/sender-web3/tree/main
